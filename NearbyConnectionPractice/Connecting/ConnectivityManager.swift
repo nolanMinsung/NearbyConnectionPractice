@@ -30,7 +30,7 @@ class ConnectivityManager: NSObject, ObservableObject {
     // 이 값은 MCNearbyServiceAdvertiser를 생성할 때에도 사용되고,
     // MCNearbyServiceBrowser를 생성할 때에도 사용됨.
     // 사실 그냥 앱 전체에서 이 서비스를 이용할 때 사용될 서비스의 ID 정도로 생각하면 될 것 같다.
-    private let serviceType = "flatbread-flirting"
+    private let serviceType = "flatbread"
     
     // 상대방에게 보여질 내 ID인 듯
     // 익명성을 위해 랜덤 ID 사용 가능. 여기에 사용자 프로필 이름 넣거나 익명 이름 넣으면 될 듯?
@@ -82,7 +82,7 @@ class ConnectivityManager: NSObject, ObservableObject {
     func stopBrowsing() {
         browser?.stopBrowsingForPeers()
         browser = nil
-        print("Browsing 시작")
+        print("Browsing 중지")
     }
     
     // 특정 기기에 초대(연결 시도) 보내기
